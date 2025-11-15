@@ -13,7 +13,7 @@
     	comma_semi: comma_semi_morph {
       	compatible = "zmk,behavior-mod-morph";
       	#binding-cells = <0>;
-      	bindings = <&kp COMMA>, <&kp SEMI>;
+      	bindings = <&kp SEMI>, <&kp COMMA>;
       	mods = <(MOD_LSFT|MOD_RSFT)>;
     	};
   	};
