@@ -9,14 +9,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-  	behaviors {
-    	comma_semi: comma_semi_morph {
-      	compatible = "zmk,behavior-mod-morph";
-      	#binding-cells = <0>;
-      	bindings = <&kp SEMI>, <&kp COMMA>;
-      	mods = <(MOD_LSFT|MOD_RSFT)>;
-    	};
-  	};
+    behaviors {
+        comma_semi: comma_semi_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp COMMA>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -30,7 +32,7 @@
             bindings = <
 &kp TAB              &kp B  &kp L  &kp D         &kp C           &kp V    &kp J  &kp F      &kp O          &kp U    &kp COLON  &kp BSPC
 &mt LEFT_GUI ESCAPE  &kp N  &kp R  &kp T         &kp S           &kp G    &kp Y  &kp H      &kp A          &kp E    &kp I      &kp ENTER
-&kp LEFT_CONTROL     &kp X  &kp Q  &kp M         &kp W           &kp Z    &kp K  &kp P      &comma_semi      &kp DOT  &kp FSLH   &kp RIGHT_CONTROL
+&kp LEFT_CONTROL     &kp X  &kp Q  &kp M         &kp W           &kp Z    &kp K  &kp P      &comma_semi    &kp DOT  &kp FSLH   &kp RIGHT_CONTROL
                                    &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 2    &mo 1  &kp SPACE  &kp RIGHT_ALT
             >;
         };
@@ -43,10 +45,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_CLR_ALL  &bt BT_NXT    &kp N3        &kp N4                &kp N5                  &trans          &kp N5          &kp NUMBER_6  &kp N7        &kp N8        &trans
-&trans  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4            &kp N0          &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &trans
-&trans  &trans          &trans        &trans        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &kp N9        &trans
-                                      &trans        &trans                &trans                  &trans          &trans          &trans
+&trans  &kp NUMBER_1    &kp NUMBER_2  &kp N3     &kp N4                &kp N5                  &kp NUMBER_6    &kp N7          &kp N8        &kp N9        &kp N0        &trans
+&trans  &bt BT_SEL 0    &bt BT_SEL 1  &kp EQUAL  &bt BT_SEL 3          &bt BT_SEL 4            &kp N0          &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &trans
+&trans  &bt BT_CLR_ALL  &trans        &trans     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &kp N9        &trans
+                                      &trans     &trans                &trans                  &trans          &trans          &trans
             >;
         };
 
