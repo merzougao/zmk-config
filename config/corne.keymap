@@ -86,8 +86,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp TILDE  &kp DLLR   &kp FSLH          &kp AT     &kp SEMI    &kp CARET  &kp LBKT  &kp AMPS  &kp RBKT  &kp DOUBLE_QUOTES  &trans
-&trans  &kp STAR   &kp MINUS  &kp PLUS          &kp EQUAL  &kp LT      &kp GT     &kp LPAR  &kp BSLH  &kp RPAR  &kp UNDER          &trans
+&trans  &kp TILDE  &kp DLLR   &kp FSLH          &kp AT     &kp SEMI    &kp CARET  &kp LBKT  &kp AMPS  &kp RBKT  &trans             &trans
+&trans  &kp STAR   &kp MINUS  &kp PLUS          &kp EQUAL  &kp LT      &kp GT     &kp LPAR  &kp BSLH  &kp RPAR  &kp DOUBLE_QUOTES  &trans
 &trans  &kp GRAVE  &kp HASH   &kp SINGLE_QUOTE  &kp EXCL   &trans      &kp PRCNT  &kp LBRC  &kp PIPE  &kp RBRC  &kp COLON          &trans
                               &trans            &trans     &trans      &trans     &trans    &trans
             >;
