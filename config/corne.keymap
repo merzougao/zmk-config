@@ -59,7 +59,7 @@
 &kp TAB       &kp B  &kp L  &kp D         &kp C           &kp V    &kp J               &kp F      &kp O          &kp U    &colon_underscore  &kp BSPC
 &kp ESCAPE    &kp N  &kp R  &kp T         &kp S           &kp G    &kp Y               &kp H      &kp A          &kp E    &kp I              &kp ENTER
 &kp LEFT_GUI  &kp X  &kp Q  &kp M         &kp W           &kp Z    &kp K               &kp P      &comma_semi    &kp DOT  &kp FSLH           &kp RCTRL
-                            &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 2    &numberHoldTap 1 0  &kp SPACE  &kp RIGHT_ALT
+                            &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 1    &numberHoldTap 2 0  &kp SPACE  &kp RIGHT_ALT
             >;
         };
 
