@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUMBERLAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 1>;
+            bindings = <&none>, <&tog 2>;
         };
 
         numberHoldTap: numberHoldTap {
@@ -45,6 +45,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Gaming {
+            bindings = <&tog 1>;
+            key-positions = <38 39>;
+        };
+
+        bluetooth {
+            bindings = <&mo 4>;
+            key-positions = <37 38>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -59,7 +73,16 @@
 &kp TAB       &kp B  &kp L  &kp D         &kp C           &kp V    &kp J               &kp F      &kp O          &kp U    &colon_underscore  &kp BSPC
 &kp ESCAPE    &kp N  &kp R  &kp T         &kp S           &kp G    &kp Y               &kp H      &kp A          &kp E    &kp I              &kp ENTER
 &kp LEFT_GUI  &kp X  &kp Q  &kp M         &kp W           &kp Z    &kp K               &kp P      &comma_semi    &kp DOT  &kp FSLH           &kp RCTRL
-                            &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 2    &numberHoldTap 1 0  &kp SPACE  &kp RIGHT_ALT
+                            &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 3    &numberHoldTap 2 0  &kp SPACE  &kp RIGHT_ALT
+            >;
+        };
+
+        Gaming {
+            bindings = <
+&trans  &trans  &kp Q  &kp W   &kp E   &kp R     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp A  &kp S   &kp D   &kp F     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp Z  &kp X   &kp C   &kp V     &trans  &trans  &trans  &trans  &trans  &trans
+                       &trans  &trans  &trans    &mo 2   &trans  &trans
             >;
         };
 
@@ -93,7 +116,7 @@
             >;
         };
 
-        layer_3 {
+        bluetooth {
             bindings = <
 &trans  &trans          &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -103,12 +126,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        BothLayersOn {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
