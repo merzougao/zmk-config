@@ -54,7 +54,7 @@
         };
 
         bluetooth {
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
             key-positions = <37 38>;
         };
     };
@@ -98,6 +98,15 @@
 &trans  &kp NUMBER_1       &kp NUMBER_2     &kp NUMBER_3          &kp NUMBER_4          &kp N5    &kp NUMBER_6    &kp N7          &kp N8        &kp N9                &kp N0                &trans
 &trans  &trans             &trans           &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT             &kp N9                &trans
                                             &trans                &trans                &trans    &tog 0          &trans          &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&kp EXCL   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp N5           &kp NUMBER_6   &kp N7    &kp N8                 &kp N9            &kp N0             &trans
+&kp TILDE  &kp STAR      &kp MINUS     &kp PLUS          &kp EQUAL          &kp AT           &kp LESS_THAN  &kp LPAR  &kp RIGHT_PARENTHESIS  &kp BACKSLASH     &kp UNDERSCORE     &kp GREATER_THAN
+&kp GRAVE  &kp HASH      &kp DOLLAR    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp AMPERSAND    &kp PERCENT    &kp LBRC  &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET
+                                       &trans            &trans             &trans           &trans         &trans    &trans
             >;
         };
 
