@@ -111,7 +111,7 @@
             bindings = <
 &trans  &kp TILDE      &kp PLUS   &kp ASTERISK      &kp AT     &trans    &trans         &kp LBKT  &kp DOLLAR  &kp RBKT  &kp DOUBLE_QUOTES  &trans
 &trans  &kp LESS_THAN  &kp MINUS  &kp GREATER_THAN  &kp EQUAL  &trans    &kp AMPERSAND  &kp LPAR  &kp BSLH    &kp RPAR  &kp UNDERSCORE     &trans
-&trans  &trans         &kp PIPE   &kp EXCL          &kp POUND  &trans    &kp PRCNT      &kp LBRC  &kp CARET   &kp RBRC  &kp APOSTROPHE     &trans
+&trans  &kp EXCL       &kp PIPE   &kp SEMICOLON     &kp POUND  &trans    &kp PRCNT      &kp LBRC  &kp CARET   &kp RBRC  &kp APOSTROPHE     &trans
                                   &trans            &trans     &trans    &trans         &trans    &trans
             >;
         };
