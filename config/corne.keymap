@@ -70,10 +70,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp B  &kp L  &kp D         &kp C  &kp V             &kp J               &kp F      &kp O              &kp U    &colon_underscore  &kp BSPC
-&kp ESCAPE    &kp N  &kp R  &kp T         &kp S  &kp G             &kp Y               &kp H      &kp A              &kp E    &kp I              &kp ENTER
-&kp LEFT_GUI  &kp X  &kp Q  &kp M         &kp W  &kp Z             &kp K               &kp P      &comma_semi        &kp DOT  &kp FSLH           &kp RIGHT_CONTROL
-                            &kp LEFT_ALT  &mo 3  &kp LEFT_SHIFT    &numberHoldTap 2 0  &kp SPACE  &kp RIGHT_CONTROL
+&kp TAB       &kp B  &kp L  &kp D         &kp C  &kp V             &kp J       &kp F      &kp O              &kp U    &colon_underscore  &kp BSPC
+&kp ESCAPE    &kp N  &kp R  &kp T         &kp S  &kp G             &kp Y       &kp H      &kp A              &kp E    &kp I              &kp ENTER
+&kp LEFT_GUI  &kp X  &kp Q  &kp M         &kp W  &kp Z             &kp K       &kp P      &comma_semi        &kp DOT  &kp FSLH           &kp RIGHT_CONTROL
+                            &kp LEFT_ALT  &mo 3  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &kp RIGHT_CONTROL
             >;
         };
 
@@ -109,10 +109,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp TILDE      &kp PLUS   &kp ASTERISK      &kp AT     &trans    &trans         &kp LBKT  &kp DOLLAR  &kp RBKT  &kp DOUBLE_QUOTES  &trans
-&trans  &kp LESS_THAN  &kp MINUS  &kp GREATER_THAN  &kp EQUAL  &trans    &kp AMPERSAND  &kp LPAR  &kp BSLH    &kp RPAR  &kp UNDERSCORE     &trans
-&trans  &kp EXCL       &kp PIPE   &kp SEMICOLON     &kp POUND  &trans    &kp PRCNT      &kp LBRC  &kp CARET   &kp RBRC  &kp APOSTROPHE     &trans
-                                  &trans            &trans     &trans    &trans         &trans    &trans
+&kp TILDE    &kp NUMBER_1       &kp NUMBER_2       &kp NUMBER_3    &kp NUMBER_4      &kp N5           &kp NUMBER_6   &kp N7    &kp N8            &kp N9    &kp N0            &kp AT_SIGN
+&kp PERCENT  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp AMPERSAND    &kp PLUS       &kp LPAR  &kp MINUS         &kp RPAR  &kp ASTERISK      &kp PIPE
+&trans       &kp HASH           &kp BACKSLASH      &kp DOLLAR      &kp EQUAL         &kp CARET        &kp LESS_THAN  &kp LBRC  &kp SINGLE_QUOTE  &kp RBRC  &kp GREATER_THAN  &kp EXCL
+                                                   &trans          &trans            &trans           &trans         &trans    &trans
             >;
         };
 
