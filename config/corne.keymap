@@ -109,10 +109,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE         &kp NUMBER_1       &kp NUMBER_2       &kp NUMBER_3    &kp NUMBER_4      &kp N5           &kp NUMBER_6   &kp N7    &kp N8     &kp N9    &kp N0            &kp AT_SIGN
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp RIGHT_BRACKET  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp AMPERSAND    &kp PLUS       &kp LPAR  &kp MINUS  &kp RPAR  &kp ASTERISK      &kp PIPE
-&kp PERCENT       &kp HASH           &kp BACKSLASH      &kp DOLLAR      &kp EQUAL         &kp CARET        &kp LESS_THAN  &kp LBRC  &kp SEMI   &kp RBRC  &kp GREATER_THAN  &kp EXCL
-                                                        &trans          &trans            &trans           &trans         &trans    &trans
+&kp TILDE    &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3    &kp NUMBER_4      &kp N5           &kp NUMBER_6   &kp N7    &kp N8     &kp N9    &kp N0            &kp AT_SIGN
+&kp HASH     &kp ASTRK         &kp RIGHT_BRACKET  &kp UNDERSCORE  &kp LEFT_BRACKET  &kp AMPERSAND    &kp PLUS       &kp LPAR  &kp MINUS  &kp RPAR  &kp BACKSLASH     &kp PIPE
+&kp PERCENT  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp DOLLAR      &kp EQUAL         &kp CARET        &kp LESS_THAN  &kp LBRC  &kp SEMI   &kp RBRC  &kp GREATER_THAN  &kp EXCL
+                                                  &trans          &trans            &trans           &trans         &trans    &trans
             >;
         };
 
