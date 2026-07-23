@@ -46,18 +46,21 @@
         // Holds the guard layer (topmost, all-trans) plus the given modifier
         // while a combo chord is held: keys fall through to base under the mod,
         // and other combos (restricted to layers = <0>) cannot fire meanwhile.
+
         guard_mod: guard_mod {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_press &mo 4>
-                , <&macro_param_1to1>
-                , <&macro_press &kp MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_1to1>
-                , <&macro_release &kp MACRO_PLACEHOLDER>
-                , <&macro_release &mo 4>
-                ;
+            bindings =
+                <&macro_press>,
+                <&mo 4 &macro_param_1to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&mo 4>;
         };
     };
 
@@ -68,6 +71,7 @@
         // idle: c/d pay a <=25 ms buffer and a fast c->d roll (shell `cd`)
         // can chord. Mod combos are after-idle by usage, so prior idle makes
         // their members latency-free during normal typing.
+
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <3 4>;
@@ -114,6 +118,15 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <32 33>;
+            timeout-ms = <30>;
+        };
+    };
+
+    macros {
     };
 
     keymap {
@@ -175,6 +188,7 @@
 
         // Held by guard_mod while a mod chord is down. Topmost + all-trans:
         // keys pass through to the layers below, combos (layers = <0>) don't fire.
+
         guard {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
