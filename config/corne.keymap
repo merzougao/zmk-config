@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUMBERLAYER";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog 2>;
+            bindings = <&none>, <&tog 1>;
         };
 
         numberHoldTap: numberHoldTap {
@@ -60,17 +60,8 @@
             bindings = <
 &kp TAB       &kp B  &kp L  &kp D  &kp C  &kp V             &kp J       &kp F      &kp O          &kp U    &colon_underscore  &kp BSPC
 &kp ESCAPE    &kp N  &kp R  &kp T  &kp S  &kp G             &kp Y       &kp H      &kp A          &kp E    &kp I              &none
-&kp LEFT_GUI  &kp X  &kp Q  &kp M  &kp W  &kp Z             &kp K       &kp P      &comma_semi    &kp DOT  &kp FSLH           &kp RIGHT_CONTROL
-                            &mo 2  &mo 3  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &kp RIGHT_ALT
-            >;
-        };
-
-        Gaming {
-            bindings = <
-&kp TAB         &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y   &kp U   &kp I      &kp O    &kp P          &trans
-&kp ESCAPE      &kp A  &kp S  &kp D  &kp F      &kp G        &kp H   &kp J   &kp K      &kp L    &kp LS(COLON)  &trans
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH       &trans
-                              &mo 3  &kp SPACE  &kp LCTRL    &trans  &trans  &trans
+&kp LEFT_GUI  &kp X  &kp Q  &kp M  &kp W  &kp Z             &kp K       &kp P      &kp COMMA      &kp DOT  &kp FSLH           &kp RIGHT_CONTROL
+                            &mo 1  &mo 2  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &kp RIGHT_ALT
             >;
         };
 
@@ -84,7 +75,7 @@
             bindings = <
 &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp N5    &mkp LCLK  &mmv MOVE_DOWN  &mmv MOVE_UP  &kp C_BRIGHTNESS_INC  &mkp MB1  &trans
 &trans  &kp NUMBER_1       &kp NUMBER_2     &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &kp N5    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT             &kp N0    &trans
-&mo 4   &trans             &trans           &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &trans    &none      &none           &none         &none                 &kp N9    &trans
+&mo 3   &trans             &trans           &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &trans    &none      &none           &none         &none                 &kp N9    &trans
                                             &trans                &trans                &trans    &trans     &trans          &trans
             >;
         };
