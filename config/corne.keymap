@@ -18,6 +18,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        dot_colon: dot_colon_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -36,28 +44,28 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // | ESC |  L  |  D  |  C  |  V  |   |  J  |  F  |  O  |  U  | BSPC |
-            // |  N  |  R  |  T  |  S  |  G  |   |  Y  |  H  |  A  |  E  |  I   |
-            // |  B  |  Q  |  M  |  W  |  Z  |   |  K  |  P  | ,/; |  .  |  X   |
+            // | ESC |  L  |  D  |  C  |  V  |   |  J  |  F  |  O  |  U  |  X  |
+            // |  N  |  R  |  T  |  S  |  G  |   |  Y  |  H  |  A  |  E  |  I  |
+            // |  B  |  Q  |  M  |  W  |  Z  |   |  K  |  P  | ,/; | ./: |  /  |
             //             | NAV | SYM | SHFT |   | RET | SPC |
 
             bindings = <
-&none  &kp ESCAPE  &kp L  &kp D  &kp C  &kp V             &kp J       &kp F      &kp O        &kp U    &kp BACKSPACE  &none
-&none  &kp N       &kp R  &kp T  &kp S  &kp G             &kp Y       &kp H      &kp A        &kp E    &kp I          &none
-&none  &kp B       &kp Q  &kp M  &kp W  &kp Z             &kp K       &kp P      &comma_semi  &kp DOT  &kp X          &none
+&none  &kp ESCAPE  &kp L  &kp D  &kp C  &kp V             &kp J       &kp F      &kp O        &kp U       &kp X      &none
+&none  &kp N       &kp R  &kp T  &kp S  &kp G             &kp Y       &kp H      &kp A        &kp E       &kp I      &none
+&none  &kp B       &kp Q  &kp M  &kp W  &kp Z             &kp K       &kp P      &comma_semi  &dot_colon  &kp SLASH  &none
                           &mo 1  &sl 2  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &none
             >;
         };
 
         Nav {
             // -----------------------------------------------------------------------------------------
-            // | VOLDN | VOLUP | BRI- | BRI+ |  5  |   | LCLK | MDN | MUP | BRI+ | MB1 |
+            // | VOLDN | VOLUP | BRI- | BRI+ |  5  |   | LCLK | MDN | MUP | CAPS | MB1 |
             // |   1   |   2   | MLFT | MRGT |  5  |   | LFT  | DWN |  UP | RGT  |  0  |
             // |       |       | MLFT | MRGT |     |   |      |     |     |      |  9  |
             //                 |     |     |     |   |     |     |
 
             bindings = <
-&trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp N5    &mkp LCLK  &mmv MOVE_DOWN  &mmv MOVE_UP  &kp C_BRIGHTNESS_INC  &mkp MB1  &trans
+&trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp N5    &mkp LCLK  &mmv MOVE_DOWN  &mmv MOVE_UP  &caps_word  &mkp MB1  &trans
 &trans  &kp NUMBER_1       &kp NUMBER_2     &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &kp N5    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT             &kp N0    &trans
 &mo 3   &trans             &trans           &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &trans    &none      &none           &none         &none                 &kp N9    &trans
                                             &trans                &trans                &trans    &trans     &trans          &trans
@@ -68,14 +76,14 @@
             // -----------------------------------------------------------------------------------------
             // |  ~   |  !   |  |  |  *   |  #  |   |  %  |  [  |  _  |  ]  |  &  |
             // | sCTL | sALT | NUM | sGUI |  =  |   |  +  |  (  |  -  |  )  |  \  |
-            // |  '   |  "   |  ?  |  /   |  $  |   |  <  |  {  |  :  |  }  |  >  |
-            //              |     | held | ... |   | TAB | SPC |
+            // |  '   |  "   | TAB | BSPC |  `  |   |  <  |  {  |  $  |  }  |  >  |
+            //              |     | held |     |   | RET | SPC |
 
             bindings = <
 &none  &kp TILDE         &kp EXCL           &kp PIPE      &kp ASTRK      &kp POUND     &kp PERCENT    &kp LEFT_BRACKET  &kp UNDER  &kp RIGHT_BRACKET  &kp AMPS          &none
 &none  &skq LCTRL        &skq LEFT_ALT      &mo 3         &skq LEFT_GUI  &kp EQUAL     &kp PLUS       &kp LPAR          &kp MINUS  &kp RPAR           &kp BACKSLASH     &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp QUESTION  &kp SLASH      &kp DOLLAR    &kp LESS_THAN  &kp LBRC          &kp COLON  &kp RBRC           &kp GREATER_THAN  &none
-                                            &trans        &trans         &trans        &kp TAB        &trans            &trans
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp TAB       &kp BACKSPACE  &kp GRAVE     &kp LESS_THAN  &kp LBRC          &kp DOLLAR  &kp RBRC          &kp GREATER_THAN  &none
+                                            &trans        &trans         &trans        &trans         &trans            &trans
             >;
         };
 
@@ -83,13 +91,13 @@
             // -----------------------------------------------------------------------------------------
             // |     |     |     |     |     |   |  1  |  2  |  3  |  4  |  5  |
             // |     |     |     |     |     |   |  6  |  7  |  8  |  9  |  0  |
-            // |     |     |     |     |  ^  |   |     |  @  |  `  |     |     |
+            // |     |     |     |     |  ^  |   |     |  @  |     |     |     |
             //             |     |     |     |   |     |     |
 
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans       &kp N1  &kp N2  &kp N3     &kp N4  &kp N5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans       &kp N6  &kp N7  &kp N8     &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &kp CARET    &trans  &kp AT  &kp GRAVE  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp CARET    &trans  &kp AT  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans       &trans  &trans  &trans
             >;
         };
