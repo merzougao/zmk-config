@@ -30,14 +30,20 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
-
             release-after-ms = <1000>;
             quick-release;
             ignore-modifiers;
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        nav {
+            bindings = <&mo 1>;
+            key-positions = <37 40>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -53,7 +59,7 @@
 &none  &kp ESCAPE  &kp L  &kp D  &kp C  &kp V             &kp J       &kp F      &kp O        &kp U       &kp X      &none
 &none  &kp N       &kp R  &kp T  &kp S  &kp G             &kp Y       &kp H      &kp A        &kp E       &kp I      &none
 &none  &kp B       &kp Q  &kp M  &kp W  &kp Z             &kp K       &kp P      &comma_semi  &dot_colon  &kp SLASH  &none
-                          &mo 1  &sl 2  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &none
+                          &none  &sl 2  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &none
             >;
         };
 
@@ -66,8 +72,8 @@
 
             bindings = <
 &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp N5    &mkp LCLK  &mmv MOVE_DOWN  &mmv MOVE_UP  &caps_word  &mkp MB1  &trans
-&trans  &kp NUMBER_1       &kp NUMBER_2     &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &kp N5    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT             &kp N0    &trans
-&mo 3   &trans             &trans           &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &trans    &none      &none           &none         &none                 &kp N9    &trans
+&trans  &kp NUMBER_1       &kp NUMBER_2     &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &kp N5    &kp LEFT   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT   &kp N0    &trans
+&mo 3   &trans             &trans           &mmv MOVE_LEFT        &mmv MOVE_RIGHT       &trans    &none      &none           &none         &none       &kp N9    &trans
                                             &trans                &trans                &trans    &trans     &trans          &trans
             >;
         };
@@ -80,10 +86,10 @@
             //              |     | held |     |   | RET | SPC |
 
             bindings = <
-&none  &kp TILDE         &kp EXCL           &kp PIPE      &kp ASTRK      &kp POUND     &kp PERCENT    &kp LEFT_BRACKET  &kp UNDER  &kp RIGHT_BRACKET  &kp AMPS          &none
-&none  &skq LCTRL        &skq LEFT_ALT      &mo 3         &skq LEFT_GUI  &kp EQUAL     &kp PLUS       &kp LPAR          &kp MINUS  &kp RPAR           &kp BACKSLASH     &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp TAB       &kp BACKSPACE  &kp GRAVE     &kp LESS_THAN  &kp LBRC          &kp DOLLAR  &kp RBRC          &kp GREATER_THAN  &none
-                                            &trans        &trans         &trans        &trans         &trans            &trans
+&none  &kp TILDE         &kp EXCL           &kp PIPE  &kp ASTRK      &kp POUND    &kp PERCENT    &kp LEFT_BRACKET  &kp UNDER   &kp RIGHT_BRACKET  &kp AMPS          &none
+&none  &skq LCTRL        &skq LEFT_ALT      &mo 3     &skq LEFT_GUI  &kp EQUAL    &kp PLUS       &kp LPAR          &kp MINUS   &kp RPAR           &kp BACKSLASH     &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp TAB   &kp BACKSPACE  &kp GRAVE    &kp LESS_THAN  &kp LBRC          &kp DOLLAR  &kp RBRC           &kp GREATER_THAN  &none
+                                            &trans    &trans         &trans       &trans         &trans            &trans
             >;
         };
 
@@ -95,8 +101,8 @@
             //             |     |     |     |   |     |     |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans       &kp N1  &kp N2  &kp N3     &kp N4  &kp N5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans       &kp N6  &kp N7  &kp N8     &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans       &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans  &trans  &trans  &trans  &trans  &kp CARET    &trans  &kp AT  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans       &trans  &trans  &trans
             >;
