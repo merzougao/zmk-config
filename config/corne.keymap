@@ -62,7 +62,7 @@
 &none  &kp ESCAPE  &kp L  &kp D  &kp C  &kp V             &kp J       &kp F      &kp O        &kp U       &kp X      &none
 &none  &kp N       &kp R  &kp T  &kp S  &kp G             &kp Y       &kp H      &kp A        &kp E       &kp I      &none
 &none  &kp B       &kp Q  &kp M  &kp W  &kp Z             &kp K       &kp P      &comma_semi  &dot_colon  &kp SLASH  &none
-                          &none  &sl 2  &kp LEFT_SHIFT    &kp RETURN  &kp SPACE  &none
+                          &none  &sl 2  &skq LEFT_SHIFT    &kp RETURN  &kp SPACE  &none
             >;
         };
 
