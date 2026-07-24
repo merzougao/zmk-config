@@ -74,7 +74,7 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <3 4>;
+            key-positions = <15 16>;
             timeout-ms = <25>;
             layers = <0>;
         };
@@ -122,6 +122,12 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <32 33>;
+            timeout-ms = <30>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <3 2>;
             timeout-ms = <30>;
         };
     };
@@ -173,7 +179,7 @@
 &none  &kp TILDE         &kp EXCL           &kp PIPE  &kp ASTRK      &kp POUND    &kp PERCENT    &kp LEFT_BRACKET  &kp DOLLAR  &kp RIGHT_BRACKET  &kp AMPS          &none
 &none  &kp AT            &kp UNDER          &mo 3     &kp GRAVE      &kp EQUAL    &kp PLUS       &kp LPAR          &kp MINUS   &kp RPAR           &kp BACKSLASH     &none
 &none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp TAB   &kp BACKSPACE  &kp CARET    &kp LESS_THAN  &kp LBRC          &kp SEMI    &kp RBRC           &kp GREATER_THAN  &none
-                                            &trans    &trans         &trans       &trans         &kp ESCAPE        &trans
+                                            &trans    &trans         &trans       &trans         &trans            &trans
             >;
         };
 
