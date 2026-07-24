@@ -42,6 +42,9 @@
         nav {
             bindings = <&mo 1>;
             key-positions = <37 40>;
+            timeout-ms = <35>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
     };
 
