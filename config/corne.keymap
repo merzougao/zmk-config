@@ -36,6 +36,16 @@
         };
     };
 
+    macros {
+        arrow: arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -68,16 +78,16 @@
 
         Symbols {
             // -----------------------------------------------------------------------------------------
-            // |  ~   |  !   |  |  |  *   |  #  |   |  %  |  [  |  _  |  ]  |  &  |
-            // | sCTL | sALT | NUM | sGUI |  =  |   |  +  |  (  |  -  |  )  |  \  |
-            // |  '   |  "   | TAB | BSPC |  `  |   |  <  |  {  |  $  |  }  |  >  |
-            //              |     | held |     |   | RET | SPC |
+            // |  `   |  TAB  |  '   |  "   |  |  |   |  %  |  [  |  ]  | BSPC |  *  |
+            // | sCTL | sALT  | SYM2 | sGUI |     |   |  =  |  (  |  )  |  -   |  \  |
+            // |      |       | NUM  |      |     |   |  $  |  {  |  }  |  _   | ->  |
+            //                |      | held |     |   | ESC | SPC |
 
             bindings = <
-&none  &kp TILDE         &kp TAB            &kp PIPE    &kp ASTRK      &kp POUND    &kp PERCENT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSPACE  &kp AMPS          &none
-&none  &skq LCTRL        &skq LEFT_ALT      &mo 3       &skq LEFT_GUI  &kp EQUAL    &kp PLUS       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp BACKSLASH     &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp DOLLAR  &kp EXCL       &kp CARET    &kp LESS_THAN  &kp LBRC              &kp RIGHT_BRACE        &kp UNDER      &kp GREATER_THAN  &none
-                                            &trans      &trans         &trans       &trans         &trans                &trans
+&none  &kp GRAVE   &kp TAB        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PIPE    &kp PERCENT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSPACE  &kp ASTRK      &none
+&none  &skq LCTRL  &skq LEFT_ALT  &mo 4             &skq LEFT_GUI      &none       &kp EQUAL    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp BACKSLASH  &none
+&none  &none       &none          &mo 3             &none              &none       &kp DOLLAR   &kp LBRC              &kp RIGHT_BRACE        &kp UNDER      &arrow         &none
+                                  &trans            &trans             &trans      &trans       &trans                &trans
             >;
         };
 
@@ -98,16 +108,31 @@
 
         Number {
             // -----------------------------------------------------------------------------------------
-            // |     |     |     |     |     |   |  1  |  2  |  3  |  4  |  5  |
-            // |     |     |     |     |     |   |  6  |  7  |  8  |  9  |  0  |
-            // |     |     |     |     |  ^  |   |     |  @  |     |     |     |
+            // |     |     |     |     |     |   |     |  1  |  2  |  3  |     |
+            // |     |     |     |     |     |   |     |  4  |  5  |  6  |     |
+            // |     |     |     |     |     |   |     |  7  |  8  |  9  |  0  |
             //             |     |     |     |   |     |     |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp N1  &kp N2  &kp N3  &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp GRAVE  &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp AT     &kp N7  &kp N8  &kp N9  &trans        &trans
-                        &trans  &trans  &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Symbols2 {
+            // -----------------------------------------------------------------------------------------
+            // |     |     |     |     |     |   |  #  |  @  |  !  |  +  |  &  |
+            // |     |     |     |     |     |   |     |     |  <  |  >  |  ~  |
+            // |     |     |     |     |     |   |     |     |     |  ^  |     |
+            //             |     |     |     |   |     |     |
+
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp POUND  &kp AT  &kp EXCL       &kp PLUS          &kp AMPS   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp TILDE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans         &kp CARET         &trans    &trans
+                        &trans  &trans  &trans    &trans     &trans     &trans
             >;
         };
     };
