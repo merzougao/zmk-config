@@ -40,7 +40,7 @@
         compatible = "zmk,combos";
 
         nav {
-            bindings = <&mo 1>;
+            bindings = <&mo 2>;
             key-positions = <37 40>;
             timeout-ms = <35>;
             require-prior-idle-ms = <100>;
