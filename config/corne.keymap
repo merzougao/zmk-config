@@ -68,14 +68,14 @@
 
         Symbols {
             // -----------------------------------------------------------------------------------------
-            // |  `   |  TAB  |  '   |  "   |  |  |   |  %  |  [  |  ]  | BSPC |  *  |
-            // | sCTL | sALT  | SYM2 | sGUI |     |   |  =  |  (  |  )  |  -   |  \  |
+            // |  `   |  TAB  |  '   |  "   |     |   |     |  [  |  ]  | BSPC |  *  |
+            // | sCTL | sALT  | SYM2 | sGUI |     |   |     |  (  |  )  |  -   |  \  |
             // |      |       | NUM  |      |     |   |     |  {  |  }  |  _   |  $  |
             //                |      | held |     |   | ESC | SPC |
 
             bindings = <
-&none  &kp GRAVE   &kp TAB        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PIPE    &kp PERCENT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSPACE  &kp ASTRK      &none
-&none  &skq LCTRL  &skq LEFT_ALT  &mo 4             &skq LEFT_GUI      &none       &kp EQUAL    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp BACKSLASH  &none
+&none  &kp GRAVE   &kp TAB        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none       &none        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSPACE  &kp ASTRK      &none
+&none  &skq LCTRL  &skq LEFT_ALT  &mo 4             &skq LEFT_GUI      &none       &none        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp BACKSLASH  &none
 &none  &none       &none          &mo 3             &none              &none       &none        &kp LBRC              &kp RIGHT_BRACE        &kp UNDER      &kp DOLLAR     &none
                                   &trans            &trans             &trans      &trans       &trans                &trans
             >;
@@ -113,15 +113,15 @@
 
         Symbols2 {
             // -----------------------------------------------------------------------------------------
-            // |     |     |     |     |     |   |  #  |  @  |  !  |  +  |  &  |
-            // |     |     |     |     |     |   |     |     |  <  |  >  |  ~  |
-            // |     |     |     |     |     |   |     |     |     |  ^  |     |
+            // |     |     |     |     |     |   |     |  @  |  !  |  <  |  >  |
+            // |     |     |     |     |     |   |     |  =  |  &  |  +  |  ~  |
+            // |     |     |     |     |     |   |     |  #  |  %  |  ^  |  |  |
             //             |     |     |     |   |     |     |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp POUND  &kp AT  &kp EXCL       &kp PLUS          &kp AMPS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp TILDE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans         &kp CARET         &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none  &kp AT     &kp EXCL     &kp LESS_THAN  &kp GREATER_THAN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none  &kp EQUAL  &kp AMPS     &kp PLUS       &kp TILDE         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none  &kp POUND  &kp PERCENT  &kp CARET      &kp PIPE          &trans
                         &trans  &trans  &trans    &trans     &trans  &trans
             >;
         };
