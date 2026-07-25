@@ -115,8 +115,8 @@
 
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4  &kp N5  &kp N6  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
@@ -131,8 +131,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp POUND  &kp AT  &kp EXCL       &kp PLUS          &kp AMPS   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp TILDE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans         &kp CARET         &trans    &trans
-                        &trans  &trans  &trans    &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans         &kp CARET         &trans     &trans
+                        &trans  &trans  &trans    &trans     &trans  &trans
             >;
         };
     };
