@@ -59,10 +59,10 @@
             //             | NAV | SYM | SHFT |   | RET | SPC |
 
             bindings = <
-&none  &kp B  &kp L  &kp D  &kp C  &kp V              &kp J       &kp F      &kp O        &kp U       &kp RET    &none
-&none  &kp N  &kp R  &kp T  &kp S  &kp G              &kp Y       &kp H      &kp A        &kp E       &kp I      &none
-&none  &kp X  &kp Q  &kp M  &kp W  &kp Z              &kp K       &kp P      &comma_semi  &dot_colon  &kp SLASH  &none
-                     &none  &sl 1  &skq LEFT_SHIFT    &kp ESCAPE  &kp SPACE  &none
+&none  &kp B  &kp L  &kp D  &kp C  &kp V    &kp J       &kp F      &kp O        &kp U       &kp RET    &none
+&none  &kp N  &kp R  &kp T  &kp S  &kp G    &kp Y       &kp H      &kp A        &kp E       &kp I      &none
+&none  &kp X  &kp Q  &kp M  &kp W  &kp Z    &kp K       &kp P      &comma_semi  &dot_colon  &kp SLASH  &none
+                     &none  &sl 1  &mo 2    &kp ESCAPE  &kp SPACE  &none
             >;
         };
 
@@ -75,8 +75,8 @@
 
             bindings = <
 &none  &kp GRAVE   &kp TAB        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none     &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSPACE  &kp ASTRK      &none
-&none  &skq LCTRL  &skq LEFT_ALT  &mo 4             &skq LEFT_GUI      &none     &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp BACKSLASH  &none
-&none  &none       &none          &trans            &mo 3              &none     &none   &kp LBRC              &kp RIGHT_BRACE        &kp UNDER      &kp DOLLAR     &none
+&none  &skq LCTRL  &skq LEFT_ALT  &skq LEFT_SHIFT   &skq LEFT_GUI      &none     &none   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS      &kp BACKSLASH  &none
+&none  &none       &none          &sl 4             &mo 3              &none     &none   &kp LBRC              &kp RIGHT_BRACE        &kp UNDER      &kp DOLLAR     &none
                                   &trans            &trans             &trans    &trans  &trans                &trans
             >;
         };
